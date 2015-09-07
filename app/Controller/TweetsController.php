@@ -42,8 +42,40 @@ class TweetsController extends AppController {
 		debug("db file => ".$fpath);
 		
 		debug("exists => ".(file_exists($fpath) ? "yes" : "no"));
+
+		/*******************************
+			pdo: setup
+		*******************************/
+		//REF http://www.if-not-true-then-false.com/2012/php-pdo-sqlite3-example/
+// 		$file_db = new PDO("sqlite:".$fpath.".new");
+		$file_db = new PDO("sqlite:$fpath");
+// 		$file_db = new PDO('sqlite:messaging.sqlite3');
 		
-	}
+		if ($file_db != null) {
+			
+// 			debug("pdo => opened");
+			debug($file_db);
+			
+// 			$file_db = null;
+			
+		} else {
+			
+			debug("pdo => null");
+			
+			return ;
+			
+		}
+		
+		// Set errormode to exceptions
+		$file_db->setAttribute(PDO::ATTR_ERRMODE,
+				PDO::ERRMODE_EXCEPTION);
+		
+		$result = $file_db->query('SELECT * FROM ta2');
+// 		$result = $file_db->query('SELECT * FROM messages');
+
+		$this->set("result", $result);
+		
+	}//index()
 
 	public function view($id = null) {
 		if (!$id) {

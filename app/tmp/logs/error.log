@@ -1,0 +1,25 @@
+2015-09-07 03:50:36 Error: [MissingHelperException] Helper class MainHelper could not be found.
+Exception Attributes: array (
+  'class' => 'MainHelper',
+  'plugin' => false,
+)
+Request URL: /Eclipse_Luna/Cake_TA2/tweets
+Stack Trace:
+#0 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\lib\Cake\View\View.php(907): HelperCollection->load('Main', Array)
+#1 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\lib\Cake\View\View.php(354): View->loadHelpers()
+#2 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\lib\Cake\Controller\Controller.php(1247): View->__construct(Object(TweetsController))
+#3 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\lib\Cake\Controller\Controller.php(946): Controller->_getViewObject()
+#4 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#5 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(TweetsController), Object(CakeRequest))
+#6 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2015-09-07 04:04:10 Error: Fatal Error (1): Class 'CONS' not found in [C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\Controller\TweetsController.php, line 19]
+2015-09-07 04:04:10 Error: [FatalErrorException] Class 'CONS' not found
+Request URL: /Eclipse_Luna/Cake_TA2/tweets
+Stack Trace:
+#0 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Class 'CONS' no...', 'C:\\WORKS\\WS\\Ecl...', 19)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'CONS' no...', 'C:\\WORKS\\WS\\Ecl...', 19, Array)
+#2 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Class 'CONS' no...', 'C:\\WORKS\\WS\\Ecl...', 19, Array)
+#3 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}

@@ -2505,6 +2505,130 @@
 			return $tmp_fname;
 			
 		}//get_Latest_File__By_FileName($fpath)
+
+		/*******************************
+			@return
+			null	=> 1. DB file doesn't exist<br>
+					=> 2. new PDO ~~> returned null<br>
+		*******************************/
+		public static function
+		paginate_Tweets($items_PerPage, $current_Page) {
+			/*******************************
+				pdo
+			*******************************/
+			/*******************************
+			 PDO file
+			*******************************/
+			$fpath = "";
+			
+			if ($_SERVER['SERVER_NAME'] == CONS::$name_Server_Local) {
+			
+				$fpath .= "C:\\WORKS\\WS\\Eclipse_Luna\\Cake_TA2\\app\\Lib\\data";
+			
+			} else {
+			
+				$fpath .= "/home/users/2/chips.jp-benfranklin/web/android_app_data/TA2/db";
+					
+			}//if ($_SERVER['SERVER_NAME'] == CONS::$name_Server_Local)
+			
+			/*******************************
+				validate: db file exists
+			*******************************/
+			$res = file_exists($fpath);
+
+			if ($res == false) {
+				
+				return null;
+				
+			}
+			
+			/*******************************
+			 get: the latest db file
+			*******************************/
+			$fname = Utils::get_Latest_File__By_FileName($fpath);
+			
+			$fpath .= DIRECTORY_SEPARATOR.$fname;
+			
+			/*******************************
+			 pdo: setup
+			*******************************/
+			//REF http://www.if-not-true-then-false.com/2012/php-pdo-sqlite3-example/
+			$file_db = new PDO("sqlite:$fpath");
+			
+			if ($file_db === null) {
+					
+				debug("pdo => null");
+					
+				return ;
+					
+			}
+			
+			// Set errormode to exceptions
+			$file_db->setAttribute(PDO::ATTR_ERRMODE,
+					PDO::ERRMODE_EXCEPTION);
+			
+			//ref http://stackoverflow.com/questions/669092/sqlite-getting-number-of-rows-in-a-database answered Mar 21 '09 at 10:37
+			$tweets = $file_db->query('SELECT Count(*) FROM ta2');
+// 			$tweets = $file_db->query('SELECT * FROM ta2 ORDER BY _id DESC');
+			
+// 			$cnt_Tweets = sqlite_num_rows($tweets);	//=> "Call to undefined function sqlite_num_rows()"
+
+			//ref http://stackoverflow.com/questions/883365/row-count-with-pdo answered May 19 '09 at 15:16
+			$cnt_Tweets = $tweets->fetchColumn();	//=> w
+// 			$cnt_Tweets = count($tweets);
+			
+			debug("cnt_Tweets => ".$cnt_Tweets);
+			
+			/*******************************
+				columns
+			*******************************/
+			//ref http://stackoverflow.com/questions/5428262/php-pdo-get-the-columns-name-of-a-table answered Mar 27 '13 at 23:15
+// 			$rs = $file_db->query('SELECT * FROM ta2 LIMIT 1');
+// 			$rs = $file_db->query('SELECT * FROM ta2 LIMIT 10');
+// 			$rs = $file_db->query('SELECT * FROM ta2 LIMIT 0');
+			
+// 			$col = $rs->getColumnMeta(0);	//=> w with '$rs = $file_db->query('SELECT * FROM ta2 LIMIT 1');'
+// 			$col = $rs->getColumnMeta(0);	//=> "General error: 25 bind or column index out of range"
+			
+// 			debug($col);
+				// 			array(
+				// 					'native_type' => 'integer',
+				// 					'sqlite:decl_type' => 'INTEGER',
+				// 					'table' => 'ta2',
+				// 					'flags' => array(),
+				// 					'name' => '_id',
+				// 					'len' => (int) -1,
+				// 					'precision' => (int) 0,
+				// 					'pdo_type' => (int) 2
+				// 			)
+			
+// 			debug($rs->columnCount());
+// 			$rs = $db->query('SELECT * FROM ta2 LIMIT 0');
+// 			$rs = $db->query('SELECT * FROM ta2 LIMIT 1');
+			$rs = $file_db->query('SELECT * FROM ta2 LIMIT 1');
+			for ($i = 0; $i < $rs->columnCount(); $i++) {
+				$col = $rs->getColumnMeta($i);
+				$columns[] = $col['name'];
+			}
+
+// 			debug($columns);
+			
+// 			// number of pages
+// 			$numOf_Pages = $cnt_Tweets / $items_PerPage;
+			
+// 			debug("pages => ".$numOf_Pages);
+// 			debug("pages => ".ceil($numOf_Pages));
+			
+			
+// 			$id_start
+			
+			/*******************************
+				pdo => reset
+			*******************************/
+			$file_db = null;
+			
+		}//paginate_Tweets($items_PerPage, $current_Page)
+		
 		
 	}//class Utils
 	

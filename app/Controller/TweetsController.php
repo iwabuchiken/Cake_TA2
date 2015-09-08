@@ -70,10 +70,56 @@ class TweetsController extends AppController {
 		$file_db->setAttribute(PDO::ATTR_ERRMODE,
 				PDO::ERRMODE_EXCEPTION);
 		
+		//ref range http://stackoverflow.com/questions/14068815/how-can-i-select-rows-by-range answered Dec 28 '12 at 11:32
+// 		$result = $file_db->query('SELECT * FROM ta2 ORDER BY _id DESC LIMIT 100, 10');
+// 		$result = $file_db->query('SELECT * FROM ta2 ORDER BY _id DESC LIMIT 100, 10');
 		$result = $file_db->query('SELECT * FROM ta2 ORDER BY _id DESC');
 // 		$result = $file_db->query('SELECT * FROM ta2');
 // 		$result = $file_db->query('SELECT * FROM messages');
 
+		/*******************************
+			paginate
+		*******************************/
+		$items_PerPage = 10;
+		
+// 		$tmp = $_REQUEST;
+		
+// 		debug($tmp);
+		
+		@$current_Page = $_REQUEST['page'];
+		
+		if ($current_Page == null) {
+			
+			$current_Page = 5;
+			
+		} else if (is_numeric($current_Page) === false) {
+			
+			$current_Page = 5;
+			
+		}
+		
+		
+		
+// 		$current_Page = 5;
+// 		$current_Page = 1;
+		
+		$id_start = ($current_Page - 1) * 10;
+// 		$id_start = ($current_Page - 1) * 10 + 1;
+		
+		debug("id_start => ".$id_start);
+		
+		$result = $file_db->query(
+// 						"SELECT * FROM ta2 ORDER BY _id DESC LIMIT 100, $items_PerPage");
+						"SELECT * FROM ta2 ORDER BY _id DESC "
+						."LIMIT $id_start"
+						.", "
+						.$items_PerPage);
+		
+// 		$result2 = Utils::paginate_Tweets($items_PerPage, $current_Page);
+		
+		/*******************************
+			set vars
+		*******************************/
 		$this->set("result", $result);
 		
 	}//index()

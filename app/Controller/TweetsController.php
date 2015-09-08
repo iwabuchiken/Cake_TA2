@@ -39,9 +39,9 @@ class TweetsController extends AppController {
 // 		$fpath .= $fpath.DIRECTORY_SEPARATOR.$fname;
 		
 // 		debug("db file => ".$fname);
-		debug("db file => ".$fpath);
+// 		debug("db file => ".$fpath);
 		
-		debug("exists => ".(file_exists($fpath) ? "yes" : "no"));
+// 		debug("exists => ".(file_exists($fpath) ? "yes" : "no"));
 
 		/*******************************
 			pdo: setup
@@ -54,7 +54,7 @@ class TweetsController extends AppController {
 		if ($file_db != null) {
 			
 // 			debug("pdo => opened");
-			debug($file_db);
+// 			debug($file_db);
 			
 // 			$file_db = null;
 			
@@ -70,7 +70,8 @@ class TweetsController extends AppController {
 		$file_db->setAttribute(PDO::ATTR_ERRMODE,
 				PDO::ERRMODE_EXCEPTION);
 		
-		$result = $file_db->query('SELECT * FROM ta2');
+		$result = $file_db->query('SELECT * FROM ta2 ORDER BY _id DESC');
+// 		$result = $file_db->query('SELECT * FROM ta2');
 // 		$result = $file_db->query('SELECT * FROM messages');
 
 		$this->set("result", $result);

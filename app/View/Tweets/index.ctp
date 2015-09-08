@@ -2,27 +2,37 @@
 	Tweets  (<a href="#bottom">Bottom</a><a name="top"></a>)
 </h1>
 
-<?php echo __FILE__; ?>
-<br>
-<?php echo APP; ?>
+<?php //echo __FILE__; ?>
+<!-- <br> -->
+<?php //echo APP; ?>
 
-<br>
-<?php echo gethostname(); ?>
+<!-- <br> -->
+<?php //echo gethostname(); ?>
 
-<br>
-<?php echo $_SERVER['SERVER_NAME']; ?>
+<!-- <br> -->
+<?php //echo $_SERVER['SERVER_NAME']; ?>
 
+<!-- <br> -->
 <br>
-<br>
+
+<table>
+
+	<?php echo $this->element('tweets/index/index_t_headers'); ?>
+
+	<?php echo $this->element('tweets/index/index_t_entries'); ?>
+		
+</table>
+
+
 
 <?php 
 
-	foreach($result as $row) {
-		echo $row['text'];
+// 	foreach($result as $row) {
+// 		echo $row['text'];
 		
-		echo "<br>";
-// 		echo "Id: " . $row['id'] . "\n";
-	}
+// 		echo "<br>";
+// // 		echo "Id: " . $row['id'] . "\n";
+// 	}
 
 ?>
 

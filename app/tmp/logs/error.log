@@ -43,3 +43,59 @@ Stack Trace:
 #4 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(TweetsController), Object(CakeRequest))
 #5 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #6 {main}
+2015-09-08 02:35:19 Error: [PDOException] SQLSTATE[HY000]: General error: 11 database disk image is malformed
+Request URL: /Eclipse_Luna/Cake_TA2/tweets
+Stack Trace:
+#0 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\Controller\TweetsController.php(73): PDO->query('SELECT * FROM t...')
+#1 [internal function]: TweetsController->index()
+#2 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(TweetsController), Array)
+#3 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(TweetsController), Object(CakeRequest))
+#5 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2015-09-08 02:36:01 Error: [PDOException] SQLSTATE[HY000]: General error: 11 database disk image is malformed
+Request URL: /Eclipse_Luna/Cake_TA2/tweets
+Stack Trace:
+#0 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\Controller\TweetsController.php(73): PDO->query('SELECT * FROM t...')
+#1 [internal function]: TweetsController->index()
+#2 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(TweetsController), Array)
+#3 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(TweetsController), Object(CakeRequest))
+#5 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2015-09-08 02:52:03 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /Eclipse_Luna/Cake_TA2/css/main.css
+Stack Trace:
+#0 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-08 02:52:03 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /Eclipse_Luna/Cake_TA2/js/main.js
+Stack Trace:
+#0 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-08 02:53:06 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /Eclipse_Luna/Cake_TA2/js/main.js
+Stack Trace:
+#0 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-08 02:53:49 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /Eclipse_Luna/Cake_TA2/js/main.js
+Stack Trace:
+#0 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

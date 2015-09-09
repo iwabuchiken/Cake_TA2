@@ -13,6 +13,9 @@
 <?php //echo $_SERVER['SERVER_NAME']; ?>
 
 <!-- <br> -->
+
+<?php echo $this->element('tweets/_index_pagination'); ?>
+
 <br>
 
 <table>

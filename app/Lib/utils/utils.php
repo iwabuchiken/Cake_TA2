@@ -2508,11 +2508,15 @@
 
 		/*******************************
 			@return
+			array()	[0] => array of tweets<br>
+			array()	[1] => number of tweets<br>
+			
 			null	=> 1. DB file doesn't exist<br>
 					=> 2. new PDO ~~> returned null<br>
 		*******************************/
 		public static function
-		paginate_Tweets($items_PerPage, $current_Page) {
+		paginate_Tweets($id_start, $items_PerPage) {
+// 		paginate_Tweets($items_PerPage, $current_Page) {
 			/*******************************
 				pdo
 			*******************************/
@@ -2577,7 +2581,17 @@
 			$cnt_Tweets = $tweets->fetchColumn();	//=> w
 // 			$cnt_Tweets = count($tweets);
 			
-			debug("cnt_Tweets => ".$cnt_Tweets);
+// 			debug("cnt_Tweets => ".$cnt_Tweets);
+			
+			/*******************************
+				tweets
+			*******************************/
+			$result = $file_db->query(
+			// 						"SELECT * FROM ta2 ORDER BY _id DESC LIMIT 100, $items_PerPage");
+					"SELECT * FROM ta2 ORDER BY _id DESC "
+					."LIMIT $id_start"
+					.", "
+					.$items_PerPage);
 			
 			/*******************************
 				columns
@@ -2626,6 +2640,12 @@
 				pdo => reset
 			*******************************/
 			$file_db = null;
+
+			/*******************************
+				return
+			*******************************/
+			return array($result, $cnt_Tweets);
+// 			return $result;
 			
 		}//paginate_Tweets($items_PerPage, $current_Page)
 		

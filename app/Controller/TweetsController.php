@@ -115,12 +115,73 @@ class TweetsController extends AppController {
 						.", "
 						.$items_PerPage);
 		
+		$result2 = Utils::paginate_Tweets($id_start, $items_PerPage);
 // 		$result2 = Utils::paginate_Tweets($items_PerPage, $current_Page);
 		
 		/*******************************
 			set vars
 		*******************************/
-		$this->set("result", $result);
+		$this->set("result", $result2[0]);
+// 		$this->set("result", $result2);
+// 		$this->set("result", $result);
+		
+		/*******************************
+			set vars: pagination
+		*******************************/
+		$cnt_Tweets = $result->fetchColumn();
+		
+// 		debug("result => ".$cnt_Tweets);
+		
+// 		debug("result2[1] => ".$result2[1]);
+		
+// 		debug(get_class($result));
+		
+		/*******************************
+			vars: last page
+		*******************************/
+		$residue = $result2[1] % $items_PerPage;
+		
+		if ($residue == 0) {
+		
+			$this->set("last_page", floor($result2[1] / $items_PerPage));
+// 			$this->set("last_page", $result2[1] / $items_PerPage);
+		
+		} else {
+		
+			$this->set("last_page", floor($result2[1] / $items_PerPage) + 1);
+// 			$this->set("last_page", $result2[1] / $items_PerPage + 1);
+			
+		}//if ($residue == 0)
+		
+// 		debug(sprintf(
+// 					"\$result2[1] = %d / \$items_PerPage = %d / residue = %d"
+// 					." / p = %d", 
+// 					$result2[1], $items_PerPage,
+// 					$result2[1] % $items_PerPage,
+// 					floor($result2[1] / $items_PerPage)));
+		
+// 		debug(gethostname());
+// 		debug($_SERVER);
+// 		$this->set("result", $result);
+		
+		/*******************************
+			var: URI
+		*******************************/
+		$host = $_SERVER['HTTP_HOST'];
+		
+		$request_uri = $_SERVER['REQUEST_URI'];
+		
+// 		$param_position = strstr($request_uri, 'L');
+		$param_position = strstr($request_uri, '?');
+		
+// 		debug(sprintf("param = %s / ? => %s", $request_uri, $param_position));
+// 		debug(sprintf("param = %s / ? => %d", $request_uri, $param_position));
+		
+// 		debug(str_replace($param_position, "", $request_uri));
+		
+		$this->set("uri", str_replace($param_position, "", $request_uri));
+		
+// 		debug($host.str_replace($param_position, "", $request_uri));
 		
 	}//index()
 

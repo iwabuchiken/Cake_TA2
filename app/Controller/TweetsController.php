@@ -10,81 +10,10 @@ class TweetsController extends AppController {
 	public function 
 	index() {
 
-// 		/android_app_data/TA2/db
-		/*******************************
-			PDO file
-		*******************************/
-		$fpath = "";
-		
-		if ($_SERVER['SERVER_NAME'] == CONS::$name_Server_Local) {
-		
-			$fpath .= "C:\\WORKS\\WS\\Eclipse_Luna\\Cake_TA2\\app\\Lib\\data";
-		
-		} else {
-		
-			$fpath .= "/home/users/2/chips.jp-benfranklin/web/android_app_data/TA2/db";
-			
-		}//if ($_SERVER['SERVER_NAME'] == CONS::$name_Server_Local)
-		
-		$res = file_exists($fpath);
-		
-// 		debug($fpath." => ".($res ? "exists" : "NOT exists"));
-		
-		/*******************************
-			get: the latest db file
-		*******************************/
-		$fname = Utils::get_Latest_File__By_FileName($fpath);
-		
-		$fpath .= DIRECTORY_SEPARATOR.$fname;
-// 		$fpath .= $fpath.DIRECTORY_SEPARATOR.$fname;
-		
-// 		debug("db file => ".$fname);
-// 		debug("db file => ".$fpath);
-		
-// 		debug("exists => ".(file_exists($fpath) ? "yes" : "no"));
-
-		/*******************************
-			pdo: setup
-		*******************************/
-		//REF http://www.if-not-true-then-false.com/2012/php-pdo-sqlite3-example/
-// 		$file_db = new PDO("sqlite:".$fpath.".new");
-		$file_db = new PDO("sqlite:$fpath");
-// 		$file_db = new PDO('sqlite:messaging.sqlite3');
-		
-		if ($file_db != null) {
-			
-// 			debug("pdo => opened");
-// 			debug($file_db);
-			
-// 			$file_db = null;
-			
-		} else {
-			
-			debug("pdo => null");
-			
-			return ;
-			
-		}
-		
-		// Set errormode to exceptions
-		$file_db->setAttribute(PDO::ATTR_ERRMODE,
-				PDO::ERRMODE_EXCEPTION);
-		
-		//ref range http://stackoverflow.com/questions/14068815/how-can-i-select-rows-by-range answered Dec 28 '12 at 11:32
-// 		$result = $file_db->query('SELECT * FROM ta2 ORDER BY _id DESC LIMIT 100, 10');
-// 		$result = $file_db->query('SELECT * FROM ta2 ORDER BY _id DESC LIMIT 100, 10');
-		$result = $file_db->query('SELECT * FROM ta2 ORDER BY _id DESC');
-// 		$result = $file_db->query('SELECT * FROM ta2');
-// 		$result = $file_db->query('SELECT * FROM messages');
-
 		/*******************************
 			paginate
 		*******************************/
 		$items_PerPage = 10;
-		
-// 		$tmp = $_REQUEST;
-		
-// 		debug($tmp);
 		
 		@$current_Page = $_REQUEST['page'];
 		
@@ -98,90 +27,48 @@ class TweetsController extends AppController {
 			
 		}
 		
-		
-		
-// 		$current_Page = 5;
-// 		$current_Page = 1;
-		
 		$id_start = ($current_Page - 1) * 10;
-// 		$id_start = ($current_Page - 1) * 10 + 1;
 		
 		debug("id_start => ".$id_start);
 		
-		$result = $file_db->query(
-// 						"SELECT * FROM ta2 ORDER BY _id DESC LIMIT 100, $items_PerPage");
-						"SELECT * FROM ta2 ORDER BY _id DESC "
-						."LIMIT $id_start"
-						.", "
-						.$items_PerPage);
-		
 		$result2 = Utils::paginate_Tweets($id_start, $items_PerPage);
-// 		$result2 = Utils::paginate_Tweets($items_PerPage, $current_Page);
 		
 		/*******************************
-			set vars
+			set vars: tweets
 		*******************************/
+		// tweets
 		$this->set("result", $result2[0]);
-// 		$this->set("result", $result2);
-// 		$this->set("result", $result);
 		
 		/*******************************
-			set vars: pagination
-		*******************************/
-		$cnt_Tweets = $result->fetchColumn();
-		
-// 		debug("result => ".$cnt_Tweets);
-		
-// 		debug("result2[1] => ".$result2[1]);
-		
-// 		debug(get_class($result));
-		
-		/*******************************
-			vars: last page
+			set vars: last page
 		*******************************/
 		$residue = $result2[1] % $items_PerPage;
 		
 		if ($residue == 0) {
 		
 			$this->set("last_page", floor($result2[1] / $items_PerPage));
-// 			$this->set("last_page", $result2[1] / $items_PerPage);
 		
 		} else {
 		
 			$this->set("last_page", floor($result2[1] / $items_PerPage) + 1);
-// 			$this->set("last_page", $result2[1] / $items_PerPage + 1);
 			
 		}//if ($residue == 0)
-		
-// 		debug(sprintf(
-// 					"\$result2[1] = %d / \$items_PerPage = %d / residue = %d"
-// 					." / p = %d", 
-// 					$result2[1], $items_PerPage,
-// 					$result2[1] % $items_PerPage,
-// 					floor($result2[1] / $items_PerPage)));
-		
-// 		debug(gethostname());
-// 		debug($_SERVER);
-// 		$this->set("result", $result);
+
+		/*******************************
+		 set vars: current page
+		*******************************/
+		$this->set("current_Page", $current_Page);
 		
 		/*******************************
-			var: URI
+			set vars: URI
 		*******************************/
 		$host = $_SERVER['HTTP_HOST'];
 		
 		$request_uri = $_SERVER['REQUEST_URI'];
 		
-// 		$param_position = strstr($request_uri, 'L');
 		$param_position = strstr($request_uri, '?');
 		
-// 		debug(sprintf("param = %s / ? => %s", $request_uri, $param_position));
-// 		debug(sprintf("param = %s / ? => %d", $request_uri, $param_position));
-		
-// 		debug(str_replace($param_position, "", $request_uri));
-		
 		$this->set("uri", str_replace($param_position, "", $request_uri));
-		
-// 		debug($host.str_replace($param_position, "", $request_uri));
 		
 	}//index()
 

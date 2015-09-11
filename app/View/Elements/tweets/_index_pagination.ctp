@@ -73,10 +73,13 @@
 			?>
 			
 			
+<!-- Numbers ---------------------------------->			
+<?php echo $this->element('tweets/_index_pagination_PageNumbers'); ?>
+			
 <!-- "Next" ---------------------------------->			
 			<?php 
 			
-				if ($current_Page == $last_page) {
+				if ($current_Page == $last_Page) {
 			?>
 	|
 	Next
@@ -107,7 +110,7 @@
 <!-- "Last" ---------------------------------->	
 			<?php 
 			
-				if ($current_Page == $last_page) {
+				if ($current_Page == $last_Page) {
 			?>
 			
 			|
@@ -121,7 +124,7 @@
 			
 			<?php
 				
-					$page_num = $last_page;
+					$page_num = $last_Page;
 					
 					echo "<a href=\"";
 					echo $uri."?page=$page_num";

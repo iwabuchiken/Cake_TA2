@@ -1,5 +1,7 @@
 <h1>
 	Tweets  (<a href="#bottom">Bottom</a><a name="top"></a>)
+	|
+	(<?php echo sprintf("current = %d / total = %d", $current_Page, $last_Page)?>)
 </h1>
 
 <?php //echo __FILE__; ?>
@@ -27,6 +29,9 @@
 </table>
 
 
+<br>
+
+<?php echo $this->element('tweets/_index_pagination'); ?>
 
 <?php 
 

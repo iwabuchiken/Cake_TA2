@@ -46,11 +46,11 @@ class TweetsController extends AppController {
 		
 		if ($residue == 0) {
 		
-			$this->set("last_page", floor($result2[1] / $items_PerPage));
+			$this->set("last_Page", floor($result2[1] / $items_PerPage));
 		
 		} else {
 		
-			$this->set("last_page", floor($result2[1] / $items_PerPage) + 1);
+			$this->set("last_Page", floor($result2[1] / $items_PerPage) + 1);
 			
 		}//if ($residue == 0)
 

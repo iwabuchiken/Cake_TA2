@@ -44,7 +44,20 @@
 	
 	}//if ($odd = true)
 	
-	
+	/*******************************
+	 determine: right-side numbers: adjust
+	*******************************/
+// 	debug(sprintf("\$current_Page <= (\$disp_Pages / 2) => %s", $current_Page <= ($disp_Pages / 2)));
+	if ($current_Page <= ($disp_Pages / 2)) {
+		
+// 		$num_End = $current_Page + ($disp_Pages / 2);
+// 		$num_End = $current_Page + $disp_Pages;
+		$num_End = $disp_Pages;
+		
+		
+// 		debug("\$num_End => ".$num_End);
+		
+	}//$current_Page <= ($last_Page)
 	
 	
 ?>

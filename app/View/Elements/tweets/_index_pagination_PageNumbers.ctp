@@ -54,11 +54,22 @@
 // 		$num_End = $current_Page + $disp_Pages;
 		$num_End = $disp_Pages;
 		
+// 		debug("\$num_End = \$disp_Pages => ".$num_End = $disp_Pages);
 		
 // 		debug("\$num_End => ".$num_End);
 		
 	}//$current_Page <= ($last_Page)
 	
+	/*******************************
+		right-side num: when close to the last pages
+	*******************************/
+	if ($current_Page + $disp_Half > $last_Page) {
+		
+		$num_End = $last_Page;
+		
+		$num_Start = $last_Page - $disp_Pages;
+		
+	}//$current_Page + $disp_Half > $last_Page
 	
 ?>
 

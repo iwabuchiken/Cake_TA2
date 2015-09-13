@@ -230,6 +230,8 @@ class TweetsController extends AppController {
 		*******************************/
 		if ($action == null) {
 			
+			debug("add param => '?action=go'");
+			
 			return ;
 			
 		}//$action == null
@@ -239,21 +241,103 @@ class TweetsController extends AppController {
 		/*******************************
 			build: tweet list
 		*******************************/
-		$result = Utils::find_All_Tweets_from_SQLiteDB();
+		$tweets = Utils::find_All_Tweets_from_SQLiteDB();
 		
-		if ($result !== null) {
+		if ($tweets !== null) {
 		
-			debug(count($result));
+// 			debug(count($tweets));
 			
-			debug($result[0]);
+// 			debug($tweets[0]);
 		
 		} else {
 		
-			debug("result => null");
+			debug("tweets => null");
 			
 			return ;
 			
-		}//if ($result !== null)
+		}//if ($tweets !== null)
+		
+		/*******************************
+			save data
+		*******************************/
+// 		debug($_SERVER);
+// 		debug(gethostname());
+
+		$hostname = @$_SERVER['HTTP_HOST'];
+		
+		$tweets = array_values($tweets);
+		
+// 		if ($hostname != 'localhost') {
+			
+			$count = count($tweets);
+			
+// 			$tmp = count($tweets);
+			
+// 			debug("tweets => ".$tmp);
+			
+			$count_Success = 0;
+			
+			$count_Failed = 0;
+			
+			for ($i = 0; $i < $count; $i++) {
+				
+	// 			debug($tweets[0]);
+			
+				$this->Tweet->create();
+	// 			$this->TA2->create();
+				
+				$data = array();
+				
+	// 			_id				INTEGER PRIMARY KEY AUTOINCREMENT	NOT NULL,
+	// 			created_at		VARCHAR(30),
+	// 			modified_at		VARCHAR(30),
+	// 			text			TEXT,
+	// 			uploaded_at		VARCHAR(30),
+	// 			twted_at		VARCHAR(30),
+	// 			twt_id			INTEGER,
+	// 			twt_created_at	VARCHAR(30),
+				
+	// 			orig_id			INT
+					
+				$data['Tweet']['created_at'] = $tweets[$i]['created_at'];
+				$data['Tweet']['modified_at'] = $tweets[$i]['modified_at'];
+				
+				$data['Tweet']['text'] = $tweets[$i]['text'];
+				$data['Tweet']['uploaded_at'] = $tweets[$i]['uploaded_at'];
+				$data['Tweet']['twted_at'] = $tweets[$i]['twted_at'];
+				$data['Tweet']['twt_id'] = $tweets[$i]['twt_id'];
+				$data['Tweet']['twt_created_at'] = $tweets[$i]['twt_created_at'];
+				
+				$data['Tweet']['orig_id'] = $tweets[$i]['orig_id'];
+				
+	// 			$this->Tweet->text = $tweets[0]['text'];
+				
+	// 			debug($this->Tweet);
+				
+				if ($this->Tweet->save($data)) {
+				
+					$count_Success += 1;
+				
+				} else {
+				
+					$count_Failed += 1;
+					
+				}//if ($this->Tweet->save($data))
+				
+				
+				
+// 				$this->Tweet->save($data);
+	// 			$this->Tweet->save();
+	
+			}//for ($i = 0; $i < $count; $i++)
+			
+			
+			debug("saved => $count_Success / failed => $count_Failed");
+			
+// 			$this->TA2->
+			
+// 		}//$hostname != 'localhost'
+		
 		
 	}//add_from_sqlite()
 	

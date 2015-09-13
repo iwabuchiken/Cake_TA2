@@ -2651,6 +2651,7 @@
 
 		/*******************************
 			@return
+			(("id" => 1, "text" => "ABC"), ("id" => 2, "text" => "DEF"))<br>
 		*******************************/
 		public static function
 		find_All_Tweets_from_SQLiteDB() {

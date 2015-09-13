@@ -1,19 +1,16 @@
 #pushd C:\WORKS\WS\Eclipse_Kepler\Cake_NR5\app\webroot
 #sqlite3 C:\WORKS\WS\Eclipse_Kepler\Cake_NR5\app\webroot\development.sqlite3
 
-sqlite3 C:\WORKS\WS\Eclipse_Luna\Cake_IG\app\webroot\development.sqlite3
+sqlite3 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\webroot\development.sqlite3
 .explain on
 .tables
 
-pragma table_info(keywords);
-pragma table_info(sens);
-pragma table_info(sens_histories);
-pragma table_info(admins);
+pragma table_info(tweets);
 
 .exit
 
-sqlite3 C:\WORKS\WS\Eclipse_Luna\Cake_IG\app\webroot\development.sqlite3 "pragma integrity_check"
-sqlite3 C:\WORKS\WS\Eclipse_Luna\Cake_IG\app\webroot\development.sqlite3 "reindex nodes"
+sqlite3 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\webroot\development.sqlite3 "pragma integrity_check"
+sqlite3 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\webroot\development.sqlite3 "reindex nodes"
 
 //REF http://www.dosomethinghere.com/2013/02/20/fixing-the-sqlite-error-the-database-disk-image-is-malformed/
 //REF referer http://stackoverflow.com/questions/22623865/sqlite-database-disk-image-is-malformed answered May 28 '14 at 4:56
@@ -22,44 +19,45 @@ sqlite3 C:\WORKS\WS\Eclipse_Luna\Cake_IG\app\webroot\development.sqlite3 "reinde
 .dump
 .exit
 
-copy dev.db C:\WORKS\WS\Eclipse_Luna\Cake_IG\app\webroot\development.sqlite3
+copy dev.db C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\webroot\development.sqlite3
 
-SELECT * FROM keywords;
-SELECT id,rubi FROM keywords;
-SELECT * FROM sens;
-SELECT * FROM sens_histories;
+SELECT * FROM tweets;
+SELECT _id,text FROM tweets;
 
 
 [sqlite3]======================================
-CREATE TABLE ta2 (
-	_id				INTEGER PRIMARY KEY AUTOINCREMENT	NOT NULL,
+CREATE TABLE tweets (
+	id				INTEGER PRIMARY KEY AUTOINCREMENT	NOT NULL,
 	created_at		VARCHAR(30),
 	modified_at		VARCHAR(30),
 	text			TEXT,
 	uploaded_at		VARCHAR(30),
 	twted_at		VARCHAR(30),
 	twt_id			INTEGER,
-	twt_created_at	VARCHAR(30)
+	twt_created_at	VARCHAR(30),
+	
+	orig_id			INT
+	
 );
 
-DROP TABLE ta2;
-DROP TABLE ta2_old;
+DROP TABLE tweets;
+DROP TABLE tweets_old;
 
 #REF http://stackoverflow.com/questions/4253804/insert-new-column-into-table-in-sqlite answered Nov 23 '10 at 7:59
-ALTER TABLE ta2 RENAME TO ta2_old;
+ALTER TABLE tweets RENAME TO tweets_old;
 
-INSERT INTO ta2 
+INSERT INTO tweets 
 		() 
 	SELECT
 		
-	FROM ta2_old;
+	FROM tweets_old;
 
-SELECT * FROM ta2;
+SELECT * FROM tweets;
 
 
 [mysql(lollipop)]======================================
-CREATE TABLE ta2 (
-	_id				INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+CREATE TABLE tweets (
+	id				INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	created_at		VARCHAR(30),
 	modified_at		VARCHAR(30),
 	
@@ -75,19 +73,21 @@ CREATE TABLE ta2 (
 	
 );
 
-DROP TABLE ta2;
-DROP TABLE ta2_old;
+DROP TABLE tweets;
+DROP TABLE tweets_old;
+
+DELETE FROM `tweets` WHERE id > 1;
 
 #REF http://stackoverflow.com/questions/4253804/insert-new-column-into-table-in-sqlite answered Nov 23 '10 at 7:59
-ALTER TABLE ta2 RENAME TO ta2_old;
+ALTER TABLE tweets RENAME TO tweets_old;
 
-INSERT INTO ta2 
+INSERT INTO tweets 
 		() 
 	SELECT
 		
-	FROM ta2_old;
+	FROM tweets_old;
 
-SELECT * FROM ta2;
+SELECT * FROM tweets;
 
 
 

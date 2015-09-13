@@ -1,0 +1,197 @@
+#pushd C:\WORKS\WS\Eclipse_Kepler\Cake_NR5\app\webroot
+#sqlite3 C:\WORKS\WS\Eclipse_Kepler\Cake_NR5\app\webroot\development.sqlite3
+
+sqlite3 C:\WORKS\WS\Eclipse_Luna\Cake_IG\app\webroot\development.sqlite3
+.explain on
+.tables
+
+pragma table_info(keywords);
+pragma table_info(sens);
+pragma table_info(sens_histories);
+pragma table_info(admins);
+
+.exit
+
+sqlite3 C:\WORKS\WS\Eclipse_Luna\Cake_IG\app\webroot\development.sqlite3 "pragma integrity_check"
+sqlite3 C:\WORKS\WS\Eclipse_Luna\Cake_IG\app\webroot\development.sqlite3 "reindex nodes"
+
+//REF http://www.dosomethinghere.com/2013/02/20/fixing-the-sqlite-error-the-database-disk-image-is-malformed/
+//REF referer http://stackoverflow.com/questions/22623865/sqlite-database-disk-image-is-malformed answered May 28 '14 at 4:56
+.mode insert
+.output dump_all.sql
+.dump
+.exit
+
+copy dev.db C:\WORKS\WS\Eclipse_Luna\Cake_IG\app\webroot\development.sqlite3
+
+SELECT * FROM keywords;
+SELECT id,rubi FROM keywords;
+SELECT * FROM sens;
+SELECT * FROM sens_histories;
+
+
+[sqlite3]======================================
+CREATE TABLE ta2 (
+	_id				INTEGER PRIMARY KEY AUTOINCREMENT	NOT NULL,
+	created_at		VARCHAR(30),
+	modified_at		VARCHAR(30),
+	text			TEXT,
+	uploaded_at		VARCHAR(30),
+	twted_at		VARCHAR(30),
+	twt_id			INTEGER,
+	twt_created_at	VARCHAR(30)
+);
+
+DROP TABLE ta2;
+DROP TABLE ta2_old;
+
+#REF http://stackoverflow.com/questions/4253804/insert-new-column-into-table-in-sqlite answered Nov 23 '10 at 7:59
+ALTER TABLE ta2 RENAME TO ta2_old;
+
+INSERT INTO ta2 
+		() 
+	SELECT
+		
+	FROM ta2_old;
+
+SELECT * FROM ta2;
+
+
+[mysql(lollipop)]======================================
+CREATE TABLE ta2 (
+	_id				INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	created_at		VARCHAR(30),
+	modified_at		VARCHAR(30),
+	
+	text			TEXT,
+	
+	uploaded_at		VARCHAR(30),
+	
+	twted_at		VARCHAR(30),
+	twt_id			INTEGER,
+	twt_created_at	VARCHAR(30),
+	
+	orig_id			INT
+	
+);
+
+DROP TABLE ta2;
+DROP TABLE ta2_old;
+
+#REF http://stackoverflow.com/questions/4253804/insert-new-column-into-table-in-sqlite answered Nov 23 '10 at 7:59
+ALTER TABLE ta2 RENAME TO ta2_old;
+
+INSERT INTO ta2 
+		() 
+	SELECT
+		
+	FROM ta2_old;
+
+SELECT * FROM ta2;
+
+
+
+#REF http://sql-info.de/mysql/examples/CREATE-TABLE-examples.html
+
+CREATE TABLE keywords (
+	id			INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+
+	created_at	VARCHAR(30),
+	updated_at	VARCHAR(30),
+	
+    word		VARCHAR(30),
+    
+    rubi		VARCHAR(50),
+    
+    genre_id	INTEGER,
+    
+    type_id		INTEGER,
+
+    memo		VARCHAR(50)
+	
+);
+
+DROP TABLE keywords;
+DROP TABLE keywords_old;
+
+RENAME TABLE keywords TO keywords_old;
+
+INSERT INTO keywords 
+		(id, created_at, updated_at, word, genre_id, type_id, memo) 
+	SELECT
+		id, created_at, updated_at, word, genre_id, type_id, memo
+	FROM keywords_old;
+
+------------------------------------
+CREATE TABLE sens (
+	id			INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	created_at	VARCHAR(30),
+	updated_at	VARCHAR(30),
+	
+    text		TEXT,
+    
+    kws			VARCHAR(50),
+    
+    memo		TEXT,
+    
+    version		VARCHAR(20)
+	
+);
+
+DROP TABLE sens;
+DROP TABLE sens_old;
+
+RENAME TABLE sens TO sens_old;
+
+INSERT INTO sens 
+		(id,created_at,updated_at,text,kws,memo) 
+	SELECT
+		id,created_at,updated_at,text,kws,memo
+	FROM sens_old;
+
+--------------------------------------
+------------------------------------
+CREATE TABLE sens_histories (
+	id			INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	created_at	VARCHAR(30),
+	updated_at	VARCHAR(30),
+	
+	db_id		INTEGER,
+	
+    text		TEXT,
+    
+    version		VARCHAR(20),
+    
+    memo		TEXT
+	
+);
+
+DROP TABLE sens_histories;
+DROP TABLE sens_histories_old;
+
+RENAME TABLE sens_histories TO sens_histories_old;
+
+INSERT INTO sens_histories 
+		(id,created_at,updated_at,db_id,version,memo) 
+	SELECT
+		id,created_at,updated_at,db_id,version,memo
+	FROM sens_histories_old;
+
+--------------------------------------
+
+#REF http://www.tech-recipes.com/rx/378/add-a-column-to-an-existing-mysql-table/
+ALTER TABLE histories ADD updates VARCHAR(200);
+
+DROP TABLE admins;
+
+CREATE TABLE admins (
+	id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+	created_at	VARCHAR(30),
+	updated_at	VARCHAR(30),
+	
+	name		VARCHAR(30),
+	val1		VARCHAR(100),
+	val2		VARCHAR(100)
+	
+);
+

@@ -2648,7 +2648,118 @@
 // 			return $result;
 			
 		}//paginate_Tweets($items_PerPage, $current_Page)
-		
+
+		/*******************************
+			@return
+		*******************************/
+		public static function
+		find_All_Tweets_from_SQLiteDB() {
+
+			/*******************************
+			 pdo
+			*******************************/
+			/*******************************
+			 PDO file
+			*******************************/
+			$fpath = "";
+				
+			if ($_SERVER['SERVER_NAME'] == CONS::$name_Server_Local) {
+					
+				$fpath .= "C:\\WORKS\\WS\\Eclipse_Luna\\Cake_TA2\\app\\Lib\\data";
+					
+			} else {
+					
+				$fpath .= "/home/users/2/chips.jp-benfranklin/web/android_app_data/TA2/db";
+					
+			}//if ($_SERVER['SERVER_NAME'] == CONS::$name_Server_Local)
+				
+			debug($fpath);
+			
+			/*******************************
+			 validate: db file exists
+			*******************************/
+			$res = file_exists($fpath);
+			
+			if ($res == false) {
+			
+				return null;
+			
+			}
+				
+			/*******************************
+			 get: the latest db file
+			*******************************/
+			$fname = Utils::get_Latest_File__By_FileName($fpath);
+				
+			$fpath .= DIRECTORY_SEPARATOR.$fname;
+				
+			debug($fpath);
+			
+			/*******************************
+			 pdo: setup
+			*******************************/
+			//REF http://www.if-not-true-then-false.com/2012/php-pdo-sqlite3-example/
+			$file_db = new PDO("sqlite:$fpath");
+				
+			if ($file_db === null) {
+					
+				debug("pdo => null");
+					
+				return null;
+// 				return ;
+					
+			}
+				
+			// Set errormode to exceptions
+			$file_db->setAttribute(PDO::ATTR_ERRMODE,
+					PDO::ERRMODE_EXCEPTION);
+				
+			//ref http://stackoverflow.com/questions/669092/sqlite-getting-number-of-rows-in-a-database answered Mar 21 '09 at 10:37
+			$tweets = $file_db->query('SELECT * FROM ta2 ORDER BY _id DESC');
+// 			$tweets = $file_db->query('SELECT Count(*) FROM ta2');
+
+			debug(count($tweets));
+			
+			/*******************************
+				close: db
+			*******************************/
+			$file_db = null;
+			
+			/*******************************
+			 build: list
+			*******************************/
+			$twts = array();
+			
+			foreach ($tweets as $row) {
+					
+				$tweet = array();
+					
+// 				$tweet['_id'] = $row['_id'];
+				$tweet['created_at'] = $row['created_at'];
+				$tweet['modified_at'] = $row['modified_at'];
+				
+				$tweet['text'] = $row['text'];
+					
+				$tweet['uploaded_at'] = $row['uploaded_at'];
+				$tweet['twted_at'] = $row['twted_at'];
+				$tweet['twt_id'] = $row['twt_id'];
+				
+				$tweet['twt_created_at'] = $row['twt_created_at'];
+				
+				$tweet['orig_id'] = $row['_id'];
+				
+				array_push($twts, $tweet);
+					
+			}//foreach ($result as $row)
+					
+			
+			/*******************************
+				return
+			*******************************/
+			return $twts;
+// 			return $tweets;
+			
+		}//find_All_Tweets()
 		
 	}//class Utils
 	

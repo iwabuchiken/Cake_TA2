@@ -215,6 +215,48 @@ class TweetsController extends AppController {
 		
 	}//public function add()
 
+	public function 
+	add_from_sqlite() {
+		
+		/*******************************
+			action?
+		*******************************/
+		@$action = $this->request->query['action'];
+		
+// 		debug($action);
+
+		/*******************************
+			validate
+		*******************************/
+		if ($action == null) {
+			
+			return ;
+			
+		}//$action == null
+		
+		debug("action => ".$action);
+		
+		/*******************************
+			build: tweet list
+		*******************************/
+		$result = Utils::find_All_Tweets_from_SQLiteDB();
+		
+		if ($result !== null) {
+		
+			debug(count($result));
+			
+			debug($result[0]);
+		
+		} else {
+		
+			debug("result => null");
+			
+			return ;
+			
+		}//if ($result !== null)
+		
+	}//add_from_sqlite()
+	
 	public function delete($id) {
 		/******************************
 	

@@ -2515,7 +2515,8 @@
 					=> 2. new PDO ~~> returned null<br>
 		*******************************/
 		public static function
-		paginate_Tweets($id_start, $items_PerPage) {
+		paginate_Tweets($id_start, $items_PerPage, $opt) {
+// 		paginate_Tweets($id_start, $items_PerPage) {
 // 		paginate_Tweets($items_PerPage, $current_Page) {
 			/*******************************
 				pdo
@@ -2584,14 +2585,61 @@
 // 			debug("cnt_Tweets => ".$cnt_Tweets);
 			
 			/*******************************
+				setup: options
+			*******************************/
+			if (isset($opt['filter'])
+				&& isset($opt['filter']['text'])) {
+			
+				$filter_Text = $opt['filter']['text'];
+			
+			} else {
+			
+				$filter_Text = null;
+				
+			}//if (isset($opt['filter']))
+			
+			/*******************************
+				build: query
+			*******************************/
+// 			$q = "SELECT * FROM ta2 ORDER BY _id DESC "
+// 					."LIMIT $id_start"
+// 					.", "
+// 					.$items_PerPage;
+
+			if ($filter_Text != null) {
+				
+				$q = "SELECT * FROM ta2"
+						." WHERE text like \"%$filter_Text%\" "
+						." ORDER BY _id DESC ";
+// 						."WHERE text like \"%$filter_Text%\" "
+// 						."LIMIT $id_start"
+// 						.", "
+// 				.$items_PerPage;
+				
+// 				$q .= ", WHERE text like \"$filter_Text\"";
+// 				$q .= " WHERE text like \"$filter_Text\"";
+				
+			} else {//$filter_Text != null
+
+				$q = "SELECT * FROM ta2 ORDER BY _id DESC "
+// 						."LIMIT $id_start";
+						."LIMIT $id_start"
+						.", "
+				.$items_PerPage;
+				
+			}//$filter_Text != null
+			
+			debug("q => $q");
+			
+			/*******************************
 				tweets
 			*******************************/
-			$result = $file_db->query(
-			// 						"SELECT * FROM ta2 ORDER BY _id DESC LIMIT 100, $items_PerPage");
-					"SELECT * FROM ta2 ORDER BY _id DESC "
-					."LIMIT $id_start"
-					.", "
-					.$items_PerPage);
+			$result = $file_db->query($q);
+// 			// 						"SELECT * FROM ta2 ORDER BY _id DESC LIMIT 100, $items_PerPage");
+// 					"SELECT * FROM ta2 ORDER BY _id DESC "
+// 					."LIMIT $id_start"
+// 					.", "
+// 					.$items_PerPage);
 			
 			/*******************************
 				columns

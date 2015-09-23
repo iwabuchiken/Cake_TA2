@@ -11,6 +11,13 @@ class TweetsController extends AppController {
 	index() {
 
 		/*******************************
+			options
+		*******************************/
+		$opt = $this->_index__Options();
+
+		debug($opt);
+		
+		/*******************************
 			paginate
 		*******************************/
 		$items_PerPage = 10;
@@ -31,7 +38,8 @@ class TweetsController extends AppController {
 		
 		debug("id_start => ".$id_start);
 		
-		$result2 = Utils::paginate_Tweets($id_start, $items_PerPage);
+		$result2 = Utils::paginate_Tweets($id_start, $items_PerPage, $opt);
+// 		$result2 = Utils::paginate_Tweets($id_start, $items_PerPage);
 		
 		/*******************************
 			set vars: tweets
@@ -72,6 +80,32 @@ class TweetsController extends AppController {
 		
 	}//index()
 
+	public function 
+	_index__Options() {
+
+		/*******************************
+			filter
+		*******************************/
+		@$filter = $this->request->query['filter'];
+		
+// 		if ($filter == null) {
+		
+// 			debug("filter => null");
+		
+// 		} else {
+		
+// // 			debug("filter => $filter");
+// 			debug($filter);
+			
+// 		}//if ($filter == null)
+		
+		/*******************************
+			return
+		*******************************/
+		return array("filter" => $filter);
+		
+	}//_index__Options()
+	
 	public function view($id = null) {
 		if (!$id) {
 			throw new NotFoundException(__('Invalid video'));

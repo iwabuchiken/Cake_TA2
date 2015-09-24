@@ -3,6 +3,12 @@
 <?php 
 
 	$disp_Pages = 20;	// number of page numbers to display
+	
+	$disp_Pages = ($disp_Pages > $last_Page) ? $last_Page : $disp_Pages;
+	
+// 	debug("\$disp_Pages => $disp_Pages");
+	
+// 	$disp_Pages = 20;	// number of page numbers to display
 // 	$disp_Pages = 10;	// number of page numbers to display
 	
 	$disp_Half = floor($disp_Pages / 2);	// half value
@@ -17,7 +23,8 @@
 	if ($odd === true) {
 // 	if ($odd = true) {
 	
-		debug("odd");
+// 		debug("odd => true");
+// 		debug("odd");
 	
 	} else {
 	
@@ -33,7 +40,7 @@
 	if ($odd === true) {
 		// 	if ($odd = true) {
 	
-		debug("right-side: odd");
+// 		debug("right-side: odd");
 	
 	} else {
 	
@@ -71,6 +78,25 @@
 		
 	}//$current_Page + $disp_Half > $last_Page
 	
+	/*******************************
+		modify: num_Start
+	*******************************/
+	if (!isset($num_Start)) {
+		
+		$num_Start = 1;
+		
+	}//condition
+	
+	/*******************************
+		modify: num_End
+	*******************************/
+	if (!isset($num_End)) {
+		
+		$num_End = $last_Page;
+// 		$num_End = 1;
+		
+	}//condition
+	
 ?>
 
 <?php 
@@ -89,13 +115,32 @@
 		
 		} else {
 		
-			echo "<a href=\"";
-			echo $uri."?page=$i";
-	// 		echo $uri."?page=$page_num";
-			echo "\">";
-			echo $i;
+			if (isset($filter_Text)) {
 			
-			echo "</a>";
+				$link = "<a href=\"$uri?page=$i"
+						."&".urlencode("filter[text]")."=$filter_Text\">$i</a>";
+// 						."&filter[text]=$filter_Text\">$i</a>";
+			
+			} else {
+			
+				$link = "<a href=\"$uri?page=$i\">$i</a>";
+				
+			}//if (isset($filter_Text))
+			
+			
+			
+// 			$link = 
+// 				"<a href=\"$uri?page=$i\">$i</a>";
+
+			echo $link;
+			
+// 			echo "<a href=\"";
+// 			echo $uri."?page=$i";
+// 	// 		echo $uri."?page=$page_num";
+// 			echo "\">";
+// 			echo $i;
+			
+// 			echo "</a>";
 			
 		}//if ($i == $current_Page)
 		

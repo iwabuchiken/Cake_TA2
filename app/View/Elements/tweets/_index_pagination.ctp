@@ -59,9 +59,24 @@
 				
 					$page_num = $current_Page - 1;
 					
-					echo "<a href=\"";
-					echo $uri."?page=$page_num";
-					echo "\">"; 
+					if (isset($filter_Text)) {
+							
+						$link = "<a href=\"$uri?page=$page_num"
+						."&".urlencode("filter[text]")."=$filter_Text\">";
+						// 						."&filter[text]=$filter_Text\">$i</a>";
+							
+					} else {
+							
+						$link = "<a href=\"$uri?page=$page_num\">$page_num</a>";
+						// 						$link = "<a href=\"$uri?page=$i\">$i</a>";
+							
+					}//if (isset($filter_Text))
+					
+					echo $link;
+						
+// 					echo "<a href=\"";
+// 					echo $uri."?page=$page_num";
+// 					echo "\">"; 
 			?>
 			
 		Prev
@@ -93,9 +108,24 @@
 				
 					$page_num = $current_Page + 1;
 					
-					echo "<a href=\"";
-					echo $uri."?page=$page_num";
-					echo "\">"; 
+					if (isset($filter_Text)) {
+							
+						$link = "<a href=\"$uri?page=$page_num"
+						."&".urlencode("filter[text]")."=$filter_Text\">";
+						// 						."&filter[text]=$filter_Text\">$i</a>";
+							
+					} else {
+							
+						$link = "<a href=\"$uri?page=$page_num\">$page_num</a>";
+// 						$link = "<a href=\"$uri?page=$i\">$i</a>";
+					
+					}//if (isset($filter_Text))
+
+					echo $link;
+					
+// 					echo "<a href=\"";
+// 					echo $uri."?page=$page_num";
+// 					echo "\">"; 
 			?>
 			
 		Next
@@ -125,6 +155,7 @@
 			<?php
 				
 					$page_num = $last_Page;
+					
 					
 					echo "<a href=\"";
 					echo $uri."?page=$page_num";

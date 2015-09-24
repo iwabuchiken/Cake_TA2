@@ -2610,11 +2610,22 @@
 				
 				$q = "SELECT * FROM ta2"
 						." WHERE text like \"%$filter_Text%\" "
-						." ORDER BY _id DESC ";
+						." ORDER BY _id DESC "
+// 						." ORDER BY _id DESC ";
 // 						."WHERE text like \"%$filter_Text%\" "
-// 						."LIMIT $id_start"
-// 						.", "
-// 				.$items_PerPage;
+						."LIMIT $id_start"
+						.", "
+						.$items_PerPage;
+				
+				$q_cnt = 
+						"SELECT Count(*) FROM ta2"
+						." WHERE text like \"%$filter_Text%\" "
+						." ORDER BY _id DESC "
+// 						." ORDER BY _id DESC ";
+// 						."WHERE text like \"%$filter_Text%\" "
+						."LIMIT $id_start"
+						.", "
+						.$items_PerPage;
 				
 // 				$q .= ", WHERE text like \"$filter_Text\"";
 // 				$q .= " WHERE text like \"$filter_Text\"";
@@ -2627,9 +2638,11 @@
 						.", "
 				.$items_PerPage;
 				
+				$q_cnt = "SELECT Count(*) FROM ta2";
+				
 			}//$filter_Text != null
 			
-			debug("q => $q");
+// 			debug("q => $q");
 			
 			/*******************************
 				tweets
@@ -2640,6 +2653,30 @@
 // 					."LIMIT $id_start"
 // 					.", "
 // 					.$items_PerPage);
+			
+			$res_cnt = $file_db->query($q_cnt);
+
+// 			//debug
+// 			if ($res_cnt === true) {
+			
+// 				debug("res_cnt => true");
+			
+// 			} else {
+			
+// 				debug("res_cnt => false");
+				
+// 			}//if ($res_cnt === true)
+			
+			
+			
+			
+			
+			//debug
+			$tmp_i = $res_cnt->fetchColumn();
+// 			$tmp_i = $result->fetchColumn();
+			
+// 			debug("res_cnt => $tmp_i");
+// 			debug("result => $tmp_i");
 			
 			/*******************************
 				columns
@@ -2692,7 +2729,8 @@
 			/*******************************
 				return
 			*******************************/
-			return array($result, $cnt_Tweets);
+			return array($result, $tmp_i);
+// 			return array($result, $cnt_Tweets);
 // 			return $result;
 			
 		}//paginate_Tweets($items_PerPage, $current_Page)

@@ -3731,3 +3731,688 @@ Request URL: /Eclipse_Luna/Cake_TA2/js/main.js
 Stack Trace:
 #0 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2015-09-24 01:09:22 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /Eclipse_Luna/Cake_TA2/js/main.js
+Stack Trace:
+#0 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-24 01:11:02 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /Eclipse_Luna/Cake_TA2/js/main.js
+Stack Trace:
+#0 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-24 01:11:08 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /Eclipse_Luna/Cake_TA2/js/main.js
+Stack Trace:
+#0 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-24 01:11:47 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /Eclipse_Luna/Cake_TA2/js/main.js
+Stack Trace:
+#0 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-24 01:12:49 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /Eclipse_Luna/Cake_TA2/js/main.js
+Stack Trace:
+#0 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-24 01:13:21 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /Eclipse_Luna/Cake_TA2/js/main.js
+Stack Trace:
+#0 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-24 01:14:32 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /Eclipse_Luna/Cake_TA2/js/main.js
+Stack Trace:
+#0 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-24 01:16:27 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /Eclipse_Luna/Cake_TA2/js/main.js
+Stack Trace:
+#0 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-24 01:18:48 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /Eclipse_Luna/Cake_TA2/js/main.js
+Stack Trace:
+#0 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-24 01:19:05 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /Eclipse_Luna/Cake_TA2/js/main.js
+Stack Trace:
+#0 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-24 01:19:37 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /Eclipse_Luna/Cake_TA2/js/main.js
+Stack Trace:
+#0 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-24 01:19:56 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /Eclipse_Luna/Cake_TA2/js/main.js
+Stack Trace:
+#0 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-24 01:20:16 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /Eclipse_Luna/Cake_TA2/js/main.js
+Stack Trace:
+#0 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-24 01:20:37 Error: Fatal Error (1): Call to a member function fetchColumn() on boolean in [C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\Lib\utils\utils.php, line 2658]
+2015-09-24 01:20:37 Error: [FatalErrorException] Call to a member function fetchColumn() on boolean
+Request URL: /Eclipse_Luna/Cake_TA2/tweets?page=107
+Stack Trace:
+#0 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\WORKS\\WS\\Ecl...', 2658)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\WORKS\\WS\\Ecl...', 2658, Array)
+#2 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\WORKS\\WS\\Ecl...', 2658, Array)
+#3 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-09-24 01:20:37 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /Eclipse_Luna/Cake_TA2/js/main.js
+Stack Trace:
+#0 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-24 01:21:20 Error: Fatal Error (1): Call to a member function fetchColumn() on boolean in [C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\Lib\utils\utils.php, line 2658]
+2015-09-24 01:21:20 Error: [FatalErrorException] Call to a member function fetchColumn() on boolean
+Request URL: /Eclipse_Luna/Cake_TA2/tweets?page=20
+Stack Trace:
+#0 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\WORKS\\WS\\Ecl...', 2658)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\WORKS\\WS\\Ecl...', 2658, Array)
+#2 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\WORKS\\WS\\Ecl...', 2658, Array)
+#3 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-09-24 01:21:20 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /Eclipse_Luna/Cake_TA2/js/main.js
+Stack Trace:
+#0 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-24 01:21:27 Error: Fatal Error (1): Call to a member function fetchColumn() on boolean in [C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\Lib\utils\utils.php, line 2658]
+2015-09-24 01:21:27 Error: [FatalErrorException] Call to a member function fetchColumn() on boolean
+Request URL: /Eclipse_Luna/Cake_TA2/tweets?page=2
+Stack Trace:
+#0 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\WORKS\\WS\\Ecl...', 2658)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\WORKS\\WS\\Ecl...', 2658, Array)
+#2 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\WORKS\\WS\\Ecl...', 2658, Array)
+#3 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-09-24 01:21:27 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /Eclipse_Luna/Cake_TA2/js/main.js
+Stack Trace:
+#0 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-24 01:21:35 Error: Fatal Error (1): Call to a member function fetchColumn() on boolean in [C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\Lib\utils\utils.php, line 2658]
+2015-09-24 01:21:35 Error: [FatalErrorException] Call to a member function fetchColumn() on boolean
+Request URL: /Eclipse_Luna/Cake_TA2/tweets?page=2
+Stack Trace:
+#0 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\WORKS\\WS\\Ecl...', 2658)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\WORKS\\WS\\Ecl...', 2658, Array)
+#2 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\WORKS\\WS\\Ecl...', 2658, Array)
+#3 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-09-24 01:21:36 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /Eclipse_Luna/Cake_TA2/js/main.js
+Stack Trace:
+#0 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-24 01:22:35 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /Eclipse_Luna/Cake_TA2/js/main.js
+Stack Trace:
+#0 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-24 01:22:52 Error: Fatal Error (1): Call to a member function fetchColumn() on boolean in [C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\Lib\utils\utils.php, line 2673]
+2015-09-24 01:22:52 Error: [FatalErrorException] Call to a member function fetchColumn() on boolean
+Request URL: /Eclipse_Luna/Cake_TA2/tweets?page=2
+Stack Trace:
+#0 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\WORKS\\WS\\Ecl...', 2673)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\WORKS\\WS\\Ecl...', 2673, Array)
+#2 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\WORKS\\WS\\Ecl...', 2673, Array)
+#3 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-09-24 01:22:52 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /Eclipse_Luna/Cake_TA2/js/main.js
+Stack Trace:
+#0 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-24 01:27:02 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /Eclipse_Luna/Cake_TA2/js/main.js
+Stack Trace:
+#0 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-24 01:28:16 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /Eclipse_Luna/Cake_TA2/js/main.js
+Stack Trace:
+#0 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-24 01:28:31 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /Eclipse_Luna/Cake_TA2/js/main.js
+Stack Trace:
+#0 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-24 01:29:00 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /Eclipse_Luna/Cake_TA2/js/main.js
+Stack Trace:
+#0 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-24 01:29:57 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /Eclipse_Luna/Cake_TA2/js/main.js
+Stack Trace:
+#0 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-24 01:30:54 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /Eclipse_Luna/Cake_TA2/js/main.js
+Stack Trace:
+#0 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-24 01:32:28 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /Eclipse_Luna/Cake_TA2/js/main.js
+Stack Trace:
+#0 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-24 01:32:38 Error: Fatal Error (1): Call to a member function fetchColumn() on boolean in [C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\Lib\utils\utils.php, line 2673]
+2015-09-24 01:32:38 Error: [FatalErrorException] Call to a member function fetchColumn() on boolean
+Request URL: /Eclipse_Luna/Cake_TA2/tweets?page=2
+Stack Trace:
+#0 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\WORKS\\WS\\Ecl...', 2673)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\WORKS\\WS\\Ecl...', 2673, Array)
+#2 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\WORKS\\WS\\Ecl...', 2673, Array)
+#3 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-09-24 01:32:38 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /Eclipse_Luna/Cake_TA2/js/main.js
+Stack Trace:
+#0 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-24 01:33:17 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /Eclipse_Luna/Cake_TA2/js/main.js
+Stack Trace:
+#0 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-24 01:33:59 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /Eclipse_Luna/Cake_TA2/js/main.js
+Stack Trace:
+#0 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-24 01:34:47 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /Eclipse_Luna/Cake_TA2/js/main.js
+Stack Trace:
+#0 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-24 01:37:13 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /Eclipse_Luna/Cake_TA2/js/main.js
+Stack Trace:
+#0 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-24 01:37:57 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /Eclipse_Luna/Cake_TA2/js/main.js
+Stack Trace:
+#0 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-24 01:38:06 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /Eclipse_Luna/Cake_TA2/js/main.js
+Stack Trace:
+#0 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-24 01:38:11 Error: Fatal Error (1): Call to a member function fetchColumn() on boolean in [C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\Lib\utils\utils.php, line 2673]
+2015-09-24 01:38:11 Error: [FatalErrorException] Call to a member function fetchColumn() on boolean
+Request URL: /Eclipse_Luna/Cake_TA2/tweets?page=20
+Stack Trace:
+#0 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\WORKS\\WS\\Ecl...', 2673)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\WORKS\\WS\\Ecl...', 2673, Array)
+#2 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\WORKS\\WS\\Ecl...', 2673, Array)
+#3 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-09-24 01:38:11 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /Eclipse_Luna/Cake_TA2/js/main.js
+Stack Trace:
+#0 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-24 01:40:16 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /Eclipse_Luna/Cake_TA2/js/main.js
+Stack Trace:
+#0 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-24 01:42:08 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /Eclipse_Luna/Cake_TA2/js/main.js
+Stack Trace:
+#0 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-24 01:42:14 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /Eclipse_Luna/Cake_TA2/js/main.js
+Stack Trace:
+#0 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-24 01:42:26 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /Eclipse_Luna/Cake_TA2/js/main.js
+Stack Trace:
+#0 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-24 01:42:43 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /Eclipse_Luna/Cake_TA2/js/main.js
+Stack Trace:
+#0 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-24 01:42:49 Error: Fatal Error (1): Call to a member function fetchColumn() on boolean in [C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\Lib\utils\utils.php, line 2673]
+2015-09-24 01:42:49 Error: [FatalErrorException] Call to a member function fetchColumn() on boolean
+Request URL: /Eclipse_Luna/Cake_TA2/tweets?page=20
+Stack Trace:
+#0 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\WORKS\\WS\\Ecl...', 2673)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\WORKS\\WS\\Ecl...', 2673, Array)
+#2 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\WORKS\\WS\\Ecl...', 2673, Array)
+#3 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-09-24 01:42:49 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /Eclipse_Luna/Cake_TA2/js/main.js
+Stack Trace:
+#0 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-24 01:42:56 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /Eclipse_Luna/Cake_TA2/js/main.js
+Stack Trace:
+#0 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-24 01:43:01 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /Eclipse_Luna/Cake_TA2/js/main.js
+Stack Trace:
+#0 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-24 01:43:05 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /Eclipse_Luna/Cake_TA2/js/main.js
+Stack Trace:
+#0 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-24 01:43:40 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /Eclipse_Luna/Cake_TA2/js/main.js
+Stack Trace:
+#0 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-24 01:45:07 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /Eclipse_Luna/Cake_TA2/js/main.js
+Stack Trace:
+#0 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-24 01:45:14 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /Eclipse_Luna/Cake_TA2/js/main.js
+Stack Trace:
+#0 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-24 01:45:27 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /Eclipse_Luna/Cake_TA2/js/main.js
+Stack Trace:
+#0 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-24 01:45:39 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /Eclipse_Luna/Cake_TA2/js/main.js
+Stack Trace:
+#0 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-24 01:48:03 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /Eclipse_Luna/Cake_TA2/js/main.js
+Stack Trace:
+#0 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-24 01:48:28 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /Eclipse_Luna/Cake_TA2/js/main.js
+Stack Trace:
+#0 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-24 01:48:55 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /Eclipse_Luna/Cake_TA2/js/main.js
+Stack Trace:
+#0 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-24 01:49:00 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /Eclipse_Luna/Cake_TA2/js/main.js
+Stack Trace:
+#0 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-24 01:49:06 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /Eclipse_Luna/Cake_TA2/js/main.js
+Stack Trace:
+#0 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-24 01:49:25 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /Eclipse_Luna/Cake_TA2/js/main.js
+Stack Trace:
+#0 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-24 01:50:36 Error: Fatal Error (1): Call to a member function fetchColumn() on boolean in [C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\Lib\utils\utils.php, line 2673]
+2015-09-24 01:50:36 Error: [FatalErrorException] Call to a member function fetchColumn() on boolean
+Request URL: /Eclipse_Luna/Cake_TA2/tweets
+Stack Trace:
+#0 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\WORKS\\WS\\Ecl...', 2673)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\WORKS\\WS\\Ecl...', 2673, Array)
+#2 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\WORKS\\WS\\Ecl...', 2673, Array)
+#3 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-09-24 01:50:36 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /Eclipse_Luna/Cake_TA2/js/main.js
+Stack Trace:
+#0 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-24 01:51:17 Error: Fatal Error (1): Call to a member function fetchColumn() on boolean in [C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\Lib\utils\utils.php, line 2673]
+2015-09-24 01:51:17 Error: [FatalErrorException] Call to a member function fetchColumn() on boolean
+Request URL: /Eclipse_Luna/Cake_TA2/tweets?page=10
+Stack Trace:
+#0 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\WORKS\\WS\\Ecl...', 2673)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\WORKS\\WS\\Ecl...', 2673, Array)
+#2 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\WORKS\\WS\\Ecl...', 2673, Array)
+#3 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-09-24 01:51:17 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /Eclipse_Luna/Cake_TA2/js/main.js
+Stack Trace:
+#0 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-24 01:54:40 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /Eclipse_Luna/Cake_TA2/js/main.js
+Stack Trace:
+#0 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-24 01:56:19 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /Eclipse_Luna/Cake_TA2/js/main.js
+Stack Trace:
+#0 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-24 01:56:28 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /Eclipse_Luna/Cake_TA2/js/main.js
+Stack Trace:
+#0 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-24 01:56:36 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /Eclipse_Luna/Cake_TA2/js/main.js
+Stack Trace:
+#0 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-24 01:57:00 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /Eclipse_Luna/Cake_TA2/js/main.js
+Stack Trace:
+#0 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-24 01:57:47 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /Eclipse_Luna/Cake_TA2/js/main.js
+Stack Trace:
+#0 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-24 01:57:54 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /Eclipse_Luna/Cake_TA2/js/main.js
+Stack Trace:
+#0 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-24 01:58:22 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /Eclipse_Luna/Cake_TA2/js/main.js
+Stack Trace:
+#0 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-24 01:59:44 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /Eclipse_Luna/Cake_TA2/js/main.js
+Stack Trace:
+#0 C:\WORKS\WS\Eclipse_Luna\Cake_TA2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

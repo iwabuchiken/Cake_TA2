@@ -26,7 +26,8 @@ class TweetsController extends AppController {
 		
 		if ($current_Page == null) {
 			
-			$current_Page = 5;
+			$current_Page = 1;
+// 			$current_Page = 5;
 			
 		} else if (is_numeric($current_Page) === false) {
 			
@@ -42,30 +43,72 @@ class TweetsController extends AppController {
 // 		$result2 = Utils::paginate_Tweets($id_start, $items_PerPage);
 		
 		/*******************************
+			set vars: filter
+		*******************************/
+		if (isset($opt['filter'])
+				&& isset($opt['filter']['text'])) {
+
+			$this->set("filter_Text", $opt['filter']['text']);
+				
+		} else {
+				
+			$this->set("filter_Text", null);
+
+		}//if (isset($opt['filter']))
+		
+		/*******************************
 			set vars: tweets
 		*******************************/
 		// tweets
 		$this->set("result", $result2[0]);
+		
+		debug("result2[1] => ".$result2[1]);
 		
 		/*******************************
 			set vars: last page
 		*******************************/
 		$residue = $result2[1] % $items_PerPage;
 		
+		$last_Page = floor($result2[1] / $items_PerPage);
+		
+// 		debug("last_Page => $last_Page");
+		
 		if ($residue == 0) {
 		
-			$this->set("last_Page", floor($result2[1] / $items_PerPage));
+			// modify
+			if ($last_Page == 0) {
+				
+				$last_Page = 1;
+				
+// 				debug("last page => modified: $last_Page");
+				
+			} else {
+				
+// 				debug("last_Page => not 0");
+				
+			}
+				
+			$this->set("last_Page", $last_Page);
+// 			$this->set("last_Page", floor($result2[1] / $items_PerPage));
 		
 		} else {
 		
-			$this->set("last_Page", floor($result2[1] / $items_PerPage) + 1);
+			$last_Page += 1;
+			
+			$this->set("last_Page", $last_Page);
+// 			$this->set("last_Page", $last_Page + 1);
+// 			$this->set("last_Page", floor($result2[1] / $items_PerPage) + 1);
 			
 		}//if ($residue == 0)
 
+// 		debug("last_Page => $last_Page");
+		
 		/*******************************
 		 set vars: current page
 		*******************************/
 		$this->set("current_Page", $current_Page);
+		
+// 		debug("current_Page => $current_Page");
 		
 		/*******************************
 			set vars: URI

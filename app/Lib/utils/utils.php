@@ -2582,7 +2582,7 @@
 			$cnt_Tweets = $tweets->fetchColumn();	//=> w
 // 			$cnt_Tweets = count($tweets);
 			
-// 			debug("cnt_Tweets => ".$cnt_Tweets);
+			debug("cnt_Tweets => ".$cnt_Tweets);
 			
 			/*******************************
 				setup: options
@@ -2620,12 +2620,12 @@
 				$q_cnt = 
 						"SELECT Count(*) FROM ta2"
 						." WHERE text like \"%$filter_Text%\" "
-						." ORDER BY _id DESC "
-// 						." ORDER BY _id DESC ";
-// 						."WHERE text like \"%$filter_Text%\" "
-						."LIMIT $id_start"
-						.", "
-						.$items_PerPage;
+						." ORDER BY _id DESC ";
+// // 						."WHERE text like \"%$filter_Text%\" "
+// 						." ORDER BY _id DESC "
+// 						."LIMIT $id_start"
+// 						.", "
+// 						.$items_PerPage;
 				
 // 				$q .= ", WHERE text like \"$filter_Text\"";
 // 				$q .= " WHERE text like \"$filter_Text\"";
@@ -2643,6 +2643,7 @@
 			}//$filter_Text != null
 			
 // 			debug("q => $q");
+// 			debug("\$q_cnt => $q_cnt");
 			
 			/*******************************
 				tweets
@@ -2653,19 +2654,21 @@
 // 					."LIMIT $id_start"
 // 					.", "
 // 					.$items_PerPage);
+
+// 			debug("\$result->fetchColumn() => ".$result->fetchColumn());
 			
 			$res_cnt = $file_db->query($q_cnt);
 
-// 			//debug
-// 			if ($res_cnt === true) {
+			//debug
+			if ($res_cnt === true) {
 			
-// 				debug("res_cnt => true");
+				debug("res_cnt => true");
 			
-// 			} else {
+			} else {
 			
 // 				debug("res_cnt => false");
 				
-// 			}//if ($res_cnt === true)
+			}//if ($res_cnt === true)
 			
 			
 			

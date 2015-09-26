@@ -17,10 +17,18 @@
 						'label' => '',
 						'name' => 'filter[text]',
 						'onmouseover'	=> 'this.select()',
+						
 // 						'name' => 'filter[w1]'
 				
 				);
 			
+				// default value
+				if (isset($filter_text)) {
+					
+					$option_input['value'] = $filter_text;
+					
+				}//isset($filter_text)
+				
 				echo $this->Form->create('Tweet',
 						array(
 								'type' => 'get',

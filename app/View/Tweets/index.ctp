@@ -1,7 +1,17 @@
 <h1>
 	Tweets  (<a href="#bottom">Bottom</a><a name="top"></a>)
-	|
-	(<?php echo sprintf("current = %d / total = %d", $current_Page, $last_Page)?>)
+	<br>
+	(<?php 
+	
+			echo sprintf(
+					"current page = %d / total = %d page(s) "
+					."/ total tweets = %d"
+					."/ id start = %d", 
+					$current_Page, $last_Page, 
+					$numOf_Tweets,
+					$id_start)
+			
+	?>)
 </h1>
 
 <?php //echo __FILE__; ?>

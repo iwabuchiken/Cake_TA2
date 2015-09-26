@@ -37,10 +37,15 @@ class TweetsController extends AppController {
 		
 		$id_start = ($current_Page - 1) * 10;
 		
-		debug("id_start => ".$id_start);
+// 		debug("id_start => ".$id_start);
+		
+		// id start
+		$this->set("id_start", $id_start);
 		
 		$result2 = Utils::paginate_Tweets($id_start, $items_PerPage, $opt);
 // 		$result2 = Utils::paginate_Tweets($id_start, $items_PerPage);
+		
+// 		debug($result2);
 		
 		/*******************************
 			set vars: filter
@@ -62,7 +67,10 @@ class TweetsController extends AppController {
 		// tweets
 		$this->set("result", $result2[0]);
 		
-		debug("result2[1] => ".$result2[1]);
+// 		debug("result2[1] => ".$result2[1]);
+		
+		// total num of tweets
+		$this->set("numOf_Tweets", $result2[1]);
 		
 		/*******************************
 			set vars: last page
@@ -131,16 +139,42 @@ class TweetsController extends AppController {
 		*******************************/
 		@$filter = $this->request->query['filter'];
 		
-// 		if ($filter == null) {
+		if ($filter == null) {
 		
+// 			// if no session value
+// 			if (conditions) {
+			
+// 				line1
+			
+// 			} else {
+			
+// 				line2
+				
+// 			}//if (conditions)
+			
+			
+			$this->set("filter_text", null);
+			
+			
+			
 // 			debug("filter => null");
 		
-// 		} else {
+		} else {
 		
-// // 			debug("filter => $filter");
+			if (isset($this->request->query['filter']['text'])) {
+			
+				$this->set("filter_text", $this->request->query['filter']['text']);
+			
+			} else {
+			
+				$this->set("filter_text", null);
+				
+			}//if (isset($this->request->query['filter']['text']))
+			
+// 			debug("filter => $filter");
 // 			debug($filter);
 			
-// 		}//if ($filter == null)
+		}//if ($filter == null)
 		
 		/*******************************
 			return
